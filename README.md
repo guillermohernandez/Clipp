@@ -1,3 +1,12 @@
+# What it is
+
+Clipp is meant to take the chore out copying and pasting for BAs
+
+# TODO
+
+- save vars in localStorage
+- add copy to clipboard
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
