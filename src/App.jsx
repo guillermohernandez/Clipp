@@ -45,80 +45,85 @@ function App() {
     <div className="container mx-auto py-6">
       {/* Input Fields */}
       <h1 className="text-green-600 text-5xl font-bold">Clippy</h1>
-      <div className="row-span-full">
-        <fieldset className="fieldset">
-          <legend className="fieldset-legend">Enter</legend>
-          <label htmlFor="cycleSet">Cycle Set:</label>
+      <div class="grid grid-rows-3 grid-flow-col">
+        <div className="row-span-full">
+          <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+            <legend className="fieldset-legend">Enter</legend>
+            <label htmlFor="cycleSet">Cycle Set:</label>
 
-          <input
-            className="input join-item"
-            id="cycleSet"
-            type="text"
-            value={inputs.cycleSet}
-            onChange={(e) => handleChange("cycleSet", e.target.value)}
-            aria-label="Cycle Set"
-          />
+            <input
+              className="input join-item"
+              id="cycleSet"
+              type="text"
+              placeholder="Enter the Cycle Set"
+              value={inputs.cycleSet}
+              onChange={(e) => handleChange("cycleSet", e.target.value)}
+              aria-label="Cycle Set"
+            />
 
-          <label htmlFor="cycle">Cycle:</label>
+            <label htmlFor="cycle">Cycle:</label>
 
-          <input
-            className="input join-item"
-            id="cycle"
-            type="text"
-            value={inputs.cycle}
-            onChange={(e) => handleChange("cycle", e.target.value)}
-            aria-label="Cycle"
-          />
+            <input
+              className="input join-item"
+              id="cycle"
+              type="text"
+              placeholder="Enter the Cycle"
+              value={inputs.cycle}
+              onChange={(e) => handleChange("cycle", e.target.value)}
+              aria-label="Cycle"
+            />
 
-          <label htmlFor="teamNumber">Team Number:</label>
+            <label htmlFor="teamNumber">Team Number:</label>
 
-          <input
-            className="input join-item"
-            id="teamNumber"
-            type="text"
-            value={inputs.teamNumber}
-            onChange={(e) => handleChange("teamNumber", e.target.value)}
-            aria-label="Team Number"
-          />
+            <input
+              className="input join-item"
+              id="teamNumber"
+              type="text"
+              placeholder="Enter the Team number"
+              value={inputs.teamNumber}
+              onChange={(e) => handleChange("teamNumber", e.target.value)}
+              aria-label="Team Number"
+            />
 
-          <label htmlFor="srNumber">SR Number:</label>
+            <label htmlFor="srNumber">SR Number:</label>
 
-          <input
-            className="input join-item"
-            id="srNumber"
-            type="text"
-            value={inputs.srNumber}
-            onChange={(e) => handleChange("srNumber", e.target.value)}
-            aria-label="SR Number"
-          />
+            <input
+              className="input join-item"
+              id="srNumber"
+              type="text"
+              placeholder="Enter the SR number"
+              value={inputs.srNumber}
+              onChange={(e) => handleChange("srNumber", e.target.value)}
+              aria-label="SR Number"
+            />
 
-          <label htmlFor="rits">SR Number:</label>
+            <label htmlFor="srNumber">RITS:</label>
 
-          <input
-            className="input join-item"
-            id="rits"
-            type="text"
-            value={inputs.rits}
-            onChange={(e) => handleChange("rits", e.target.value)}
-            aria-label="RITS"
-          />
-        </fieldset>
+            <input
+              className="input join-item"
+              id="rits"
+              type="text"
+              placeholder="Enter the RITS number"
+              value={inputs.rits}
+              onChange={(e) => handleChange("rits", e.target.value)}
+              aria-label="rits"
+            />
+          </fieldset>
+        </div>
+        {/* Display Values */}
+
+        <div className="row-span-6">
+          <p>
+            <strong>Cycle Set:</strong> {displayedValues.cycleSet}
+            <strong>Cycle:</strong> {displayedValues.cycle}
+            <strong>Team Number:</strong> {displayedValues.teamNumber}
+            <strong>SR Number:</strong> {displayedValues.srNumber}
+            <strong>RITS:</strong> {displayedValues.rits}
+          </p>
+        </div>
+        {/* Third Div  */}
+        <div className="row-span-full"></div>
       </div>
-
-      {/* Display Values */}
-
-      <div className="row-span-full">
-        <p>
-          <strong>Cycle Set:</strong> {displayedValues.cycleSet}
-          <strong>Cycle:</strong> {displayedValues.cycle}
-          <strong>Team Number:</strong> {displayedValues.teamNumber}
-          <strong>SR Number:</strong> {displayedValues.srNumber}
-          <strong>RITS:</strong> {displayedValues.rits}
-        </p>
-      </div>
-
-      {/* Third Div  */}
-      <div className="row-span-full"></div>
     </div>
   );
 }
